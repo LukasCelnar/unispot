@@ -3,11 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 
 // screens
 import SigninScreen from './src/screens/SigninScreen';
-import AddPartyScreen from './src/screens/AddPartyScreen';
+import HomeScreen from './src/screens/HomeScreen';
 
 export default function App() {
   return (
-    <AddPartyScreen />
+    <HomeScreen />
   );
 }
 
