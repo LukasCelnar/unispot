@@ -15,9 +15,9 @@ export default function InfoBubble() {
     ];
     
     const renderAttendents = () => {
-        return attendentList.map(attendent => {
+        return attendentList.map((attendent, i) => {
             return (
-                <View style={styles.attendent}>
+                <View key={i} style={styles.attendent}>
                     <AntDesign name="user" size={24} color={colors.colorPrimary} />
                     <Text style={styles.attendentName}>{attendent.name}</Text>
                 </View>
@@ -50,12 +50,9 @@ export default function InfoBubble() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     marginTop: 60,
     flexDirection: 'row',
-    // THIS IS NOT WORKING
-    borderRadius: 15,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   map: {
     width: '30%',
@@ -66,7 +63,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.colorBackground,
     height: 200,
     paddingLeft: 5,
-    width: '60%'
+    width: '60%',
+    padding: 5,
   },
   attendents: {
     marginTop: 5 

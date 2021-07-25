@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, FlatList } from 'react-native';
 import { colors } from '../styles';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -21,6 +21,17 @@ export default function Navbar() {
     ];
 
     const renderKeyWordButtons = () => {
+
+        <FlatList
+            data={keyWordList}
+            renderItem={({item}) => {
+                <Text style={styles.keyWord}>
+                    {item}
+                </Text>
+            }}
+            keyExtractor={item => item}
+        />
+
         return keyWordList.map((keyWord, i) => {
             return (
                 <Text key={i} style={styles.keyWord}>
@@ -57,9 +68,7 @@ export default function Navbar() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         marginTop: 60,
-        backgroundColor: colors.colorBackground
     },
     innerContainerTop: {
         flexDirection: 'row',
@@ -68,8 +77,9 @@ const styles = StyleSheet.create({
     },
     innerContainerBotttom: {
         flexDirection: 'row',
-        marginLeft: 10,
-        marginTop: 10
+        paddingLeft: 10,
+        marginTop: 10,
+        marginBottom: 10
     },
     searchBar: {
         borderColor: colors.colorPrimary,

@@ -3,13 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 
 // screens
 import SigninScreen from './src/screens/SigninScreen';
-// components
-import Navbar from './src/components/Navbar';
-import InfoBubble from './src/components/InfoBubble';
+import HomeScreen from './src/screens/HomeScreen';
 
 export default function App() {
   return (
-    <InfoBubble />
+    <HomeScreen />
   );
 }
 
