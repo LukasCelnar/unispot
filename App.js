@@ -5,10 +5,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import SigninScreen from './src/screens/SigninScreen';
 // components
 import Navbar from './src/components/Navbar';
+import InfoBubble from './src/components/InfoBubble';
 
 export default function App() {
   return (
-    <Navbar />
+    <InfoBubble />
   );
 }
 
