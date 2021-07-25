@@ -50,7 +50,8 @@ export default function InfoBubble() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 60,
+    marginTop: 'auto',
+    marginBottom: 100,
     flexDirection: 'row',
     justifyContent: 'center',
   },
